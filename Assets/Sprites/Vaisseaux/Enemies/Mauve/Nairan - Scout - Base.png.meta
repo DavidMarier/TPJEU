@@ -169,7 +169,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Nairan - Scout - Base_0: -1162233375206758482
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

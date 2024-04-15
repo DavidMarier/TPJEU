@@ -169,7 +169,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Nairan - Support Ship - Base_0: 663902596191600344
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

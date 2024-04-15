@@ -169,7 +169,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Nairan - Battlecruiser - Base_0: 1467059722000351418
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

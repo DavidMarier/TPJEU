@@ -169,7 +169,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Lahnkush_01_Side_Uniform_Angry_0: 6441481291468631896
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

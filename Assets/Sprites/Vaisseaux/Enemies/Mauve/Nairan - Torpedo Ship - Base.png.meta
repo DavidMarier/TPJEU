@@ -169,7 +169,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Nairan - Torpedo Ship - Base_0: -6873448969812629586
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

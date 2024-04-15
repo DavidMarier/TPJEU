@@ -169,7 +169,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Nairan - Bomber - Base_0: -5319456993692847856
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

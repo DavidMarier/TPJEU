@@ -5,6 +5,12 @@ using UnityEngine.UIElements;
 public class ComportementProjectile : MonoBehaviour
 {
     public float Vitesse = 5f;
+
+    private void Start()
+    {
+        Destroy(gameObject, 3f);
+    }
+
     private void Update()
     {   
         // Gère la trajectoire du projectile

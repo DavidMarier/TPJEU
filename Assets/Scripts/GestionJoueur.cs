@@ -15,7 +15,6 @@ public class GestionJoueur : MonoBehaviour
     void Update()
     {
         Actions();
-        Animation();
     }
 
     void Actions()
@@ -32,7 +31,7 @@ public class GestionJoueur : MonoBehaviour
         {         
             Instantiate(ProjectilePrefab, PositionLancement.position, transform.rotation);
         }
-
+        // Gère le bouclier
         if (Input.GetKey(KeyCode.E) && PeutActiverBouclier)
         {
             PeutActiverBouclier = false;
@@ -42,18 +41,14 @@ public class GestionJoueur : MonoBehaviour
         }
 
     }
-
-    void Animation()
-    {
-        // Moteurs
-        GetComponentInChildren<GestionMoteurs>().ActivationMoteurs();
-    }
-
+    // Gère le bouclier
     IEnumerator ActivationDesactivationBouclier()
     {
         Bouclier.SetActive(true);
+        Bouclier.GetComponent<CircleCollider2D>().enabled = true;
         yield return new WaitForSeconds(5);
         Bouclier.SetActive(false);
+        Bouclier.GetComponent<CircleCollider2D>().enabled = false;
         yield return null;
     }
     void DelaisRecuperationBouclier()

@@ -169,7 +169,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Veera_02_Side_Armor_Helmet_Angry_0: -6816761686859303991
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

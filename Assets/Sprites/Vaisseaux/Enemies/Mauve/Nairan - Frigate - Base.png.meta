@@ -169,7 +169,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Nairan - Frigate - Base_0: -6560143675306158196
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
