@@ -37,7 +37,6 @@ public class GestionJoueur : MonoBehaviour
             PeutActiverBouclier = false;
             StartCoroutine(ActivationDesactivationBouclier());
             Invoke("DelaisRecuperationBouclier", 20f);
-
         }
 
     }

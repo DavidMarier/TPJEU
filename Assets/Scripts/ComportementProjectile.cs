@@ -6,6 +6,7 @@ public class ComportementProjectile : MonoBehaviour
 {
     public float Vitesse = 5f;
 
+    // Détruit le projectile s'il n'a pas touché de gameobject après 3 secondes
     private void Start()
     {
         Destroy(gameObject, 3f);
