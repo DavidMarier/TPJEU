@@ -6,7 +6,8 @@ public class ComportementEnemie : MonoBehaviour
 {
     private void OnCollisionEnter2D(Collision2D infoCollision)
     {
-        // Détruit l'enemie s'il entre en contacte avec un collider
-        Destroy(gameObject);
+        // Dï¿½truit l'ennemie s'il entre en contacte avec un collider
+        Destroy(gameObject, 0.8f);
+        GetComponent<Animator>().SetTrigger("explose");
     }
 }

@@ -7,6 +7,7 @@ public class GestionJoueur : MonoBehaviour
 {
     public float VitesseDeplacement;
     private bool PeutActiverBouclier = true;
+    // private int PointDeVie = 4;
     public GameObject Bouclier;
     public ComportementProjectile ProjectilePrefab;
     public Transform PositionLancement;
