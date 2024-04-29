@@ -6,16 +6,37 @@ using UnityEngine;
 public class GestionJoueur : MonoBehaviour
 {
     public float VitesseDeplacement;
+    private int PointDeVie = 4;
     private bool PeutActiverBouclier = true;
-    // private int PointDeVie = 4;
+    private bool Mort = false;
+    
+
     public GameObject Bouclier;
+    public GameObject Moteur;
+
     public ComportementProjectile ProjectilePrefab;
+
     public Transform PositionLancement;
+
+    public AnimationClip Explosion;
+
+    public Sprite Joueur100;
+    public Sprite Joueur75;
+    public Sprite Joueur50;
+    public Sprite Joueur25;
+
+    void Start()
+    {
+        
+    }
 
     // Update is called once per frame
     void Update()
     {
-        Actions();
+        if(!Mort)
+        {
+            Actions();
+        }
     }
 
     void Actions()
@@ -54,6 +75,55 @@ public class GestionJoueur : MonoBehaviour
     void DelaisRecuperationBouclier()
     {
         PeutActiverBouclier = true;
+    }
+    void OnTriggerEnter2D(Collider2D InfoCollision)
+    {
+        if(InfoCollision.gameObject.tag == "ProjectileEnemie")
+        {
+            Bouclier.SetActive(false);
+            Bouclier.GetComponent<CircleCollider2D>().enabled = false;
+        }
+    }
+
+    // Gère les dégats pris par le joueur et sa mort
+    void OnCollisionEnter2D(Collision2D InfoCollision)
+    {
+        if(InfoCollision.gameObject && PointDeVie > 0)
+        {
+            PointDeVie--;
+        }
+
+        if(PointDeVie <= 0)
+        {
+            Mort = true;
+        }
+
+        StartCoroutine(ApparenceJoueur(Explosion));
+    }
+
+    // Gère les animations du joueur quand il se prend des dégats
+    IEnumerator ApparenceJoueur(AnimationClip Clip)
+    {
+        if(PointDeVie == 3)
+        {
+             GetComponent<Animator>().SetInteger("75%", 3);
+        }
+        else if(PointDeVie == 2)
+        {
+             GetComponent<Animator>().SetInteger("50%", 2);
+        }
+        else if(PointDeVie == 1)
+        {
+            GetComponent<Animator>().SetInteger("25%", 1);
+        }
+        else
+        {
+            GetComponent<Animator>().SetTrigger("explose");
+            Moteur.SetActive(false);
+            yield return new WaitForSeconds(Clip.length);
+            Destroy(gameObject);
+        }
+        yield return null;
     }
 
 }

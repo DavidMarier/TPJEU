@@ -1,0 +1,9 @@
+Faire un point d'apparition (ApparitionEnemies) duquel les enemies peuvent sortir (instancier des enemies).
+Le point se trouve au dessus de la caméra.
+
+Les enemies arrivent en vagues (instances).
+Les vagues doivent toutes faire une translation sur l'axe des Y (-y) à partir du point d'apparition pour arriver dans la partie haute de la scène de jeu.
+
+Q: Gestion du bouclier.
+Q: Faire plusieurs variables GameObject pour chaque vagues ou faire une seule variable GameObject pour toutes les vagues?
+Q: Pourquoi les animations d'explosion des enemies jouent quand les enemies apparaissent.

@@ -19,7 +19,13 @@ public class ComportementTorpilleKlaed : MonoBehaviour
         transform.Translate(Vector2.down * Vitesse * Time.deltaTime);
     }
 
-    private void OnCollisionEnter2D(Collision2D infoCollision)
+    private void OnCollisionEnter2D(Collision2D InfoCollision)
+    {
+        // Détruit le projectile s'il entre en contacte avec un collider
+        Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D InfoCollision)
     {
         // Détruit le projectile s'il entre en contacte avec un collider
         Destroy(gameObject);

@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class ComportementEnemie : MonoBehaviour
 {
+    public AnimationClip Explosion;
     private void OnCollisionEnter2D(Collision2D infoCollision)
     {
         // D�truit l'ennemie s'il entre en contacte avec un collider
-        Destroy(gameObject, 0.8f);
+        Destroy(gameObject, Explosion.length);
         GetComponent<Animator>().SetTrigger("explose");
     }
 }
