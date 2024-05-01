@@ -20,11 +20,6 @@ public class GestionJoueur : MonoBehaviour
 
     public AnimationClip Explosion;
 
-    public Sprite Joueur100;
-    public Sprite Joueur75;
-    public Sprite Joueur50;
-    public Sprite Joueur25;
-
     void Start()
     {
         

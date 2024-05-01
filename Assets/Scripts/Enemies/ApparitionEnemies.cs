@@ -5,7 +5,7 @@ using UnityEngine;
 public class ApparitionEnemies : MonoBehaviour
 {
     public Transform PointApparition;
-    public GererVagueEnemies VaguesEnemies;
+    public GameObject VaguesEnemies;
     
     // Start is called before the first frame update
     void Start()

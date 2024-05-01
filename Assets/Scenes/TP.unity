@@ -1014,7 +1014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PointApparition: {fileID: 116186953}
-  VaguesEnemies: {fileID: 0}
+  VaguesEnemies: {fileID: 3028404132365342739, guid: bddf4431183083040bb1d7ad4a04b7f7, type: 3}
 --- !u!1 &161651203
 GameObject:
   m_ObjectHideFlags: 0
@@ -2176,10 +2176,6 @@ MonoBehaviour:
   ProjectilePrefab: {fileID: 120783422504431456, guid: bf1812a0d392aff46b6d1daa33236e9a, type: 3}
   PositionLancement: {fileID: 1454112631}
   Explosion: {fileID: 7400000, guid: 590a5659203fc15469c9d9ff1d00fe55, type: 2}
-  Joueur100: {fileID: -5448727121883926364, guid: f77485e3073b4c947b1d13beeca7a6b0, type: 3}
-  Joueur75: {fileID: -4835859195297287297, guid: 9e5724d11c2017c4baefe196ff429632, type: 3}
-  Joueur50: {fileID: 5091398421201204211, guid: 9c2ed56abbc87f34483e74ff09d6bfcc, type: 3}
-  Joueur25: {fileID: 6372854951805474705, guid: 4724acf5f6c5ab943bdbe93b176c9e04, type: 3}
 --- !u!114 &487078439
 MonoBehaviour:
   m_ObjectHideFlags: 0
