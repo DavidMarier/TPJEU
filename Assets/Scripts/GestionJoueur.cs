@@ -71,14 +71,6 @@ public class GestionJoueur : MonoBehaviour
     {
         PeutActiverBouclier = true;
     }
-    void OnTriggerEnter2D(Collider2D InfoCollision)
-    {
-        if(InfoCollision.gameObject.tag == "ProjectileEnemie")
-        {
-            Bouclier.SetActive(false);
-            Bouclier.GetComponent<CircleCollider2D>().enabled = false;
-        }
-    }
 
     // Gère les dégats pris par le joueur et sa mort
     void OnCollisionEnter2D(Collision2D InfoCollision)

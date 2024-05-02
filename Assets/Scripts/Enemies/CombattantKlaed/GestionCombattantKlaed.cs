@@ -10,19 +10,17 @@ public class GestionCombattantKlaed : MonoBehaviour
 
     void Start()
     {
-        if(signal)
-        {
-            // L'enemie tire
-            InvokeRepeating("Tirer", 0, 2.5f);
-        }
+        // L'enemie tire
+        InvokeRepeating("Tirer", 0, 2.5f);
     }
 
     void Tirer()
     {
-        // Gère l'attaque
-        Instantiate(TorpillePrefab, PositionLancement.position, transform.rotation);
+        if(signal)
+        {
+            // Gère l'attaque
+            Instantiate(TorpillePrefab, PositionLancement.position, transform.rotation);
+        }
     }
-
-
 
 }

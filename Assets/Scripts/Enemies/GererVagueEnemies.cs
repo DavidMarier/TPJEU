@@ -20,19 +20,19 @@ public class GererVagueEnemies : MonoBehaviour
 
     void Start()
     {
-        // Prend les dimensions de l'écran
-        LimitesEcran = MainCamera.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
-        // Récupère la position x de la vague
-        PositionX = transform.position.x;
-        // Récupère la position y de la vague
-        PositionY = transform.position.y;
+        // // Prend les dimensions de l'ï¿½cran
+        // LimitesEcran = MainCamera.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
+        // // Rï¿½cupï¿½re la position x de la vague
+        // PositionX = transform.position.x;
+        // // Rï¿½cupï¿½re la position y de la vague
+        // PositionY = transform.position.y;
     }
 
-    private void Update()
+    public void Update()
     {
         Vector2 Position = transform.position;
-
-        if (Position.x == Mathf.Clamp(Position.x, LimitesEcran.x * -1 + PositionX, LimitesEcran.x - PositionX) && Position.y == Mathf.Clamp(Position.y, LimitesEcran.y * -1 + PositionY, LimitesEcran.y - PositionY))
+        // Un seul tire Ã  la fois
+        if (Position.y < 1.30f)
         {
             GetComponentInChildren<GestionCombattantKlaed>().signal = true;
         }
@@ -41,7 +41,7 @@ public class GererVagueEnemies : MonoBehaviour
             GetComponentInChildren<GestionCombattantKlaed>().signal = false;
         }
 
-        // Gère la trajectoire de la vague
+        // Gï¿½re la trajectoire de la vague
         transform.Translate(Vector2.down * Vitesse * Time.deltaTime);
     }
 }
