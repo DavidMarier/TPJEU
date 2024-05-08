@@ -6,16 +6,18 @@ public class ComportementProjectile : MonoBehaviour
 {
     public float Vitesse = 5f;
 
-    private void Start()
-    {
-        // Détruit le projectile s'il n'a pas touché de gameobject après 3 secondes
-        Destroy(gameObject, 3f);
-    }
 
     private void Update()
     {   
         // Gère la trajectoire du projectile
         transform.Translate(Vector2.up * Vitesse * Time.deltaTime);
+
+        // Détruit le projectile s'il dépasse ou touche à la bordure haute de la caméra
+        Vector2 Position = transform.position;
+        if(Position.y >= 1.5f)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D infoCollision)
