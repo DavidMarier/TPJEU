@@ -6,17 +6,17 @@ public class GererVagueEnemies : MonoBehaviour
 {
     public float Vitesse = 0.1f;
 
-    public Camera MainCamera;
+    /*public Camera MainCamera;
     private Vector2 LimitesEcran;
     private float PositionX;
-    private float PositionY;
+    private float PositionY;*/
     // Start is called before the first frame update
 
 
-    private void Awake()
+    /*private void Awake()
     {
         MainCamera = Camera.main;
-    }
+    }*/
 
     void Start()
     {
@@ -31,14 +31,23 @@ public class GererVagueEnemies : MonoBehaviour
     public void Update()
     {
         Vector2 Position = transform.position;
-        // Un seul tire à la fois
         if (Position.y < 1.30f)
         {
-            GetComponentInChildren<GestionCombattantKlaed>().signal = true;
+            // GetComponentInChildren<GestionCombattantKlaed>().signal = true;
+
+            GestionCombattantKlaed[] lesVaisseau = GetComponentsInChildren<GestionCombattantKlaed>();
+            foreach(GestionCombattantKlaed leVaisseau in lesVaisseau)
+            {
+                leVaisseau.signal = true;
+            }
         }
         else
         {
-            GetComponentInChildren<GestionCombattantKlaed>().signal = false;
+            GestionCombattantKlaed[] lesVaisseau = GetComponentsInChildren<GestionCombattantKlaed>();
+            foreach (GestionCombattantKlaed leVaisseau in lesVaisseau)
+            {
+                leVaisseau.signal = false;
+            }
         }
 
         // G�re la trajectoire de la vague

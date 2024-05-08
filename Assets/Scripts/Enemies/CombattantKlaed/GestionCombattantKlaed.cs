@@ -18,6 +18,7 @@ public class GestionCombattantKlaed : MonoBehaviour
     {
         if(signal)
         {
+            // mettre du délais aléatoire entre les tires de vaisseaux 
             // Gère l'attaque
             Instantiate(TorpillePrefab, PositionLancement.position, transform.rotation);
         }
