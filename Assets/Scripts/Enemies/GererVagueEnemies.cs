@@ -6,6 +6,7 @@ using UnityEngine;
 public class GererVagueEnemies : MonoBehaviour
 {
     public float Vitesse = 0.1f;
+    
 
     public void Update()
     {
@@ -17,7 +18,10 @@ public class GererVagueEnemies : MonoBehaviour
         Vague1();
         // G�re la trajectoire de la vague
         transform.Translate(Vector2.down * Vitesse * Time.deltaTime);
-        yield return null;
+        yield return new WaitForSeconds(5f);
+        Vague2();
+        // G�re la trajectoire de la vague
+        transform.Translate(Vector2.down * Vitesse * Time.deltaTime);
     }
 
     void Vague1()
@@ -43,16 +47,34 @@ public class GererVagueEnemies : MonoBehaviour
         }
 
         // Faire retourner la vague à sa position initiale
-        // if(lesVaisseaux.Length == 0 && Position.y < 2)
-        // {
-        //     transform.Translate(new Vector2(0, 2f));
-        // }
+        if(lesVaisseaux.Length == 0)
+        {
+            
+        }
         
     }
 
     void Vague2()
     {
+        GestionCombattantKlaed[] lesVaisseaux;
         Vector2 Position = transform.position;
+        
+        if (Position.y < 1.25f)
+        {
+            lesVaisseaux = GetComponentsInChildren<GestionCombattantKlaed>();
+            foreach(GestionCombattantKlaed leVaisseau in lesVaisseaux)
+            {
+                leVaisseau.signal = true;
+            }
+        }
+        else
+        {
+            lesVaisseaux = GetComponentsInChildren<GestionCombattantKlaed>();
+            foreach (GestionCombattantKlaed leVaisseau in lesVaisseaux)
+            {
+                leVaisseau.signal = false;
+            }
+        }
 
     }
 }
