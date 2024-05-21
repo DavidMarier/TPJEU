@@ -20,7 +20,7 @@ public class GestionCombattantNairan : MonoBehaviour
         if(signal)
         {
             StartCoroutine(Tire());
-            StartCoroutine(Deplacement());
+            // StartCoroutine(Deplacement());
         }
     }
 
@@ -33,11 +33,11 @@ public class GestionCombattantNairan : MonoBehaviour
         yield return null;
     }
 
-    IEnumerator Deplacement()
-    {
-        transform.Translate(new Vector2(0.5f, 0));
-        yield return new WaitForSeconds(2f);
-        transform.Translate(new Vector2(-0.5f, 0));
-        yield return new WaitForSeconds(2f);
-    }
+    // IEnumerator Deplacement()
+    // {
+    //     transform.Translate(new Vector2(0.5f, 0));
+    //     yield return new WaitForSeconds(2f);
+    //     transform.Translate(new Vector2(-0.5f, 0));
+    //     yield return new WaitForSeconds(2f);
+    // }
 }
