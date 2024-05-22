@@ -10,72 +10,62 @@ public class GererVagueEnemies : MonoBehaviour
 
     public void Update()
     {
-        StartCoroutine(ApparitionDesEnemies());
+        ApparitionDesEnemies();
+        DetecterVagueVide();
     }
 
-    IEnumerator ApparitionDesEnemies()
+    public void ApparitionDesEnemies()
     {
-        Vague1();
-        // G�re la trajectoire de la vague
-        transform.Translate(Vector2.down * Vitesse * Time.deltaTime);
-        yield return new WaitForSeconds(5f);
-        Vague2();
+        Vagues();
         // G�re la trajectoire de la vague
         transform.Translate(Vector2.down * Vitesse * Time.deltaTime);
     }
 
-    void Vague1()
+    void Vagues()
     {
-        GestionCombattantKlaed[] lesVaisseaux;
+        GestionCombattantKlaed[] lesVaisseauxKlaed;
+        GestionCombattantNairan[] lesVaisseauxNairan;
         Vector2 Position = transform.position;
         
         if (Position.y < 1.25f)
         {
-            lesVaisseaux = GetComponentsInChildren<GestionCombattantKlaed>();
-            foreach(GestionCombattantKlaed leVaisseau in lesVaisseaux)
+            lesVaisseauxKlaed = GetComponentsInChildren<GestionCombattantKlaed>();
+            lesVaisseauxNairan = GetComponentsInChildren<GestionCombattantNairan>();
+
+            foreach (GestionCombattantKlaed leVaisseau in lesVaisseauxKlaed)
+            {
+                leVaisseau.signal = true;
+            }
+
+            foreach (GestionCombattantNairan leVaisseau in lesVaisseauxNairan)
             {
                 leVaisseau.signal = true;
             }
         }
         else
         {
-            lesVaisseaux = GetComponentsInChildren<GestionCombattantKlaed>();
-            foreach (GestionCombattantKlaed leVaisseau in lesVaisseaux)
+            lesVaisseauxKlaed = GetComponentsInChildren<GestionCombattantKlaed>();
+            lesVaisseauxNairan = GetComponentsInChildren<GestionCombattantNairan>();
+
+            foreach (GestionCombattantKlaed leVaisseau in lesVaisseauxKlaed)
+            {
+                leVaisseau.signal = false;
+            }
+
+            foreach (GestionCombattantNairan leVaisseau in lesVaisseauxNairan)
             {
                 leVaisseau.signal = false;
             }
         }
-
-        // Faire retourner la vague à sa position initiale
-        if(lesVaisseaux.Length == 0)
-        {
-            
-        }
-        
+  
     }
 
-    void Vague2()
+    public void DetecterVagueVide()
     {
-        GestionCombattantKlaed[] lesVaisseaux;
-        Vector2 Position = transform.position;
-        
-        if (Position.y < 1.25f)
+        if (transform.childCount < 1)
         {
-            lesVaisseaux = GetComponentsInChildren<GestionCombattantKlaed>();
-            foreach(GestionCombattantKlaed leVaisseau in lesVaisseaux)
-            {
-                leVaisseau.signal = true;
-            }
+            Debug.Log("ok");
         }
-        else
-        {
-            lesVaisseaux = GetComponentsInChildren<GestionCombattantKlaed>();
-            foreach (GestionCombattantKlaed leVaisseau in lesVaisseaux)
-            {
-                leVaisseau.signal = false;
-            }
-        }
-
     }
 }
 

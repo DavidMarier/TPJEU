@@ -20,7 +20,6 @@ public class GestionCombattantNairan : MonoBehaviour
         if(signal)
         {
             StartCoroutine(Tire());
-            // StartCoroutine(Deplacement());
         }
     }
 
@@ -32,12 +31,4 @@ public class GestionCombattantNairan : MonoBehaviour
         Instantiate(TorpillePrefab, PositionLancement.position, transform.rotation);
         yield return null;
     }
-
-    // IEnumerator Deplacement()
-    // {
-    //     transform.Translate(new Vector2(0.5f, 0));
-    //     yield return new WaitForSeconds(2f);
-    //     transform.Translate(new Vector2(-0.5f, 0));
-    //     yield return new WaitForSeconds(2f);
-    // }
 }

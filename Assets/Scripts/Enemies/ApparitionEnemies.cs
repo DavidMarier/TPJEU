@@ -5,18 +5,27 @@ using UnityEngine;
 public class ApparitionEnemies : MonoBehaviour
 {
     public Transform PointApparition;
+
+    // Vagues
     public GameObject Vague1;
-    // public GameObject VagueEnemies;
+    public GameObject Vague2;
+
+    //
+
+
     
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(GenererEnemies());
+        GenererEnemies(Vague1);
     }
 
-    IEnumerator GenererEnemies()
+    public void GenererEnemies(GameObject Vague)
     {
-        Instantiate(Vague1, PointApparition.position, transform.rotation);
-        yield return null;
+        Instantiate(Vague, PointApparition.position, transform.rotation);
     }
+
 }
+
+// transform.childCount < 1
+
