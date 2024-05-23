@@ -11,21 +11,29 @@ public class ApparitionEnemies : MonoBehaviour
     public GameObject Vague2;
 
     //
-
+    public int noVague = 1;
 
     
     // Start is called before the first frame update
     void Start()
     {
-        GenererEnemies(Vague1);
+        if(noVague == 1)
+        {
+            GenererEnemies(Vague1);
+        }
     }
 
+    public void Update()
+    {
+        if(noVague > 1 && noVague < 3)
+            {
+                Debug.Log(noVague);
+            }
+    }
     public void GenererEnemies(GameObject Vague)
     {
         Instantiate(Vague, PointApparition.position, transform.rotation);
     }
 
 }
-
-// transform.childCount < 1
 

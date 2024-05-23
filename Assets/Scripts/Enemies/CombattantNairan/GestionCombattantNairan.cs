@@ -7,11 +7,11 @@ public class GestionCombattantNairan : MonoBehaviour
 {
     public ComportementTorpilleNairan TorpillePrefab;
     public Transform PositionLancement;
-    public bool signal = true;
+    public bool signal = false;
 
     void Start()
     {
-        // L'enemie tire et se déplace
+        // L'enemie tire
         InvokeRepeating("Actions", 0, 2.5f);
     }
 

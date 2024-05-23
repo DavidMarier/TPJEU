@@ -11,10 +11,10 @@ public class GestionCombattantKlaed : MonoBehaviour
     void Start()
     {
         // L'enemie tire
-        InvokeRepeating("Tirer", 0, 2.5f);
+        InvokeRepeating("Action", 0, 2.5f);
     }
 
-    void Tirer()
+    void Action()
     {
         if(signal)
         {

@@ -6,7 +6,6 @@ using UnityEngine;
 public class GererVagueEnemies : MonoBehaviour
 {
     public float Vitesse = 0.1f;
-    
 
     public void Update()
     {
@@ -65,6 +64,8 @@ public class GererVagueEnemies : MonoBehaviour
         if (transform.childCount < 1)
         {
             Debug.Log("ok");
+            Destroy(gameObject);
+            GetComponent<ApparitionEnemies>().noVague++;
         }
     }
 }

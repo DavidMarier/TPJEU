@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 915440182966806452}
   - component: {fileID: 7930629832339363347}
   - component: {fileID: 6913377722954152804}
-  - component: {fileID: 1932671708205396842}
+  - component: {fileID: 1085487588285451408}
   m_Layer: 0
   m_Name: CombattantNairanAnime
   m_TagString: Untagged
@@ -164,7 +164,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1932671708205396842
+--- !u!114 &1085487588285451408
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 94614652238036353}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed9b8979288c6b8419d1dbe4a8d949e8, type: 3}
+  m_Script: {fileID: 11500000, guid: 67fc032dbdd3c2e4a8bf1c5812cb6b0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Explosion: {fileID: 7400000, guid: 5f379c900e6eb6c4ab9b4151b15bc11f, type: 2}
@@ -203,7 +203,7 @@ Transform:
   m_GameObject: {fileID: 2171188680575312283}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -227,6 +227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Vitesse: 0.1
+  noVague: 1
 --- !u!1 &2206852240848552960
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,7 +284,7 @@ Transform:
   m_GameObject: {fileID: 2292881666344640354}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5187764, y: 0.3574789, z: 9.895097}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -303,7 +304,7 @@ GameObject:
   - component: {fileID: 6269372650542534249}
   - component: {fileID: 93635997269464617}
   - component: {fileID: 6807806083566543472}
-  - component: {fileID: 3051485578462238795}
+  - component: {fileID: 5142134117296504939}
   m_Layer: 0
   m_Name: CombattantNairanAnime
   m_TagString: Untagged
@@ -454,7 +455,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3051485578462238795
+--- !u!114 &5142134117296504939
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -463,7 +464,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3589806688566228099}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed9b8979288c6b8419d1dbe4a8d949e8, type: 3}
+  m_Script: {fileID: 11500000, guid: 67fc032dbdd3c2e4a8bf1c5812cb6b0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Explosion: {fileID: 7400000, guid: 5f379c900e6eb6c4ab9b4151b15bc11f, type: 2}
@@ -542,7 +543,7 @@ GameObject:
   - component: {fileID: 7749198585780710954}
   - component: {fileID: 1196247828461824012}
   - component: {fileID: 6917702768711231056}
-  - component: {fileID: 7055598080109698539}
+  - component: {fileID: 395531641677814269}
   m_Layer: 0
   m_Name: CombattantNairanAnime
   m_TagString: Untagged
@@ -693,7 +694,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &7055598080109698539
+--- !u!114 &395531641677814269
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -702,7 +703,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4819499173276781515}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed9b8979288c6b8419d1dbe4a8d949e8, type: 3}
+  m_Script: {fileID: 11500000, guid: 67fc032dbdd3c2e4a8bf1c5812cb6b0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Explosion: {fileID: 7400000, guid: 5f379c900e6eb6c4ab9b4151b15bc11f, type: 2}
@@ -731,7 +732,7 @@ Transform:
   m_GameObject: {fileID: 5680321339143663223}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.5187764, y: 0.3574789, z: 9.895097}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -763,7 +764,7 @@ Transform:
   m_GameObject: {fileID: 6013166621322927991}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.4812236, y: 0.3574789, z: 9.895097}
+  m_LocalPosition: {x: -2, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -795,7 +796,7 @@ Transform:
   m_GameObject: {fileID: 6065429758733342829}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.5187764, y: 0.3574789, z: 9.895097}
+  m_LocalPosition: {x: 2, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -877,7 +878,7 @@ GameObject:
   - component: {fileID: 2949780593095196748}
   - component: {fileID: 8278211678397776585}
   - component: {fileID: 4005888640877901152}
-  - component: {fileID: 5413883885444930706}
+  - component: {fileID: 514315853510910682}
   m_Layer: 0
   m_Name: CombattantNairanAnime
   m_TagString: Untagged
@@ -1028,7 +1029,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &5413883885444930706
+--- !u!114 &514315853510910682
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1037,7 +1038,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7539536004087679079}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed9b8979288c6b8419d1dbe4a8d949e8, type: 3}
+  m_Script: {fileID: 11500000, guid: 67fc032dbdd3c2e4a8bf1c5812cb6b0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Explosion: {fileID: 7400000, guid: 5f379c900e6eb6c4ab9b4151b15bc11f, type: 2}
@@ -1066,7 +1067,7 @@ Transform:
   m_GameObject: {fileID: 7974274231624560823}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.48122358, y: 0.3574789, z: 9.895097}
+  m_LocalPosition: {x: -1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1086,7 +1087,7 @@ GameObject:
   - component: {fileID: 5311866317875916001}
   - component: {fileID: 2317298737399555863}
   - component: {fileID: 7221859369855952535}
-  - component: {fileID: 1390844187024726474}
+  - component: {fileID: 281466764207605263}
   m_Layer: 0
   m_Name: CombattantNairanAnime
   m_TagString: Untagged
@@ -1237,7 +1238,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1390844187024726474
+--- !u!114 &281466764207605263
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1246,7 +1247,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8300231242356410221}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed9b8979288c6b8419d1dbe4a8d949e8, type: 3}
+  m_Script: {fileID: 11500000, guid: 67fc032dbdd3c2e4a8bf1c5812cb6b0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Explosion: {fileID: 7400000, guid: 5f379c900e6eb6c4ab9b4151b15bc11f, type: 2}
