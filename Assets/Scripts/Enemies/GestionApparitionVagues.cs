@@ -10,7 +10,10 @@ public class GestionApparitionVagues : MonoBehaviour
     public GameObject Vague1;
     public GameObject Vague2;
 
-    //
+    // Vagues apparues
+    public bool Vague2Bool = false;
+
+    // Numéro de la vague
     public static int noVague = 1;
 
     
@@ -25,10 +28,11 @@ public class GestionApparitionVagues : MonoBehaviour
 
     public void Update()
     {
-        if(noVague > 1 && noVague < 3)
-            {
-                Debug.Log(noVague);
-            }
+        if(noVague == 2 && !Vague2Bool)
+        {
+            Vague2Bool = true;
+            GenererEnemies(Vague2);
+        }
     }
     public void GenererEnemies(GameObject Vague)
     {

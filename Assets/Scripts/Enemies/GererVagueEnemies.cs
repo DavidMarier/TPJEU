@@ -59,6 +59,7 @@ public class GererVagueEnemies : MonoBehaviour
   
     }
 
+    // On détecte quand la vague est vide et on détruit le game object vide
     public void DetecterVagueVide()
     {
         if (transform.childCount < 1)
@@ -66,6 +67,7 @@ public class GererVagueEnemies : MonoBehaviour
             Debug.Log("ok");
             GestionApparitionVagues.noVague++;
             Destroy(gameObject);
+            Debug.Log(GestionApparitionVagues.noVague);
         }
     }
 }
