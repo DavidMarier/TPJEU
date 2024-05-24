@@ -64,8 +64,8 @@ public class GererVagueEnemies : MonoBehaviour
         if (transform.childCount < 1)
         {
             Debug.Log("ok");
+            GestionApparitionVagues.noVague++;
             Destroy(gameObject);
-            GetComponent<ApparitionEnemies>().noVague++;
         }
     }
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ApparitionEnemies : MonoBehaviour
+public class GestionApparitionVagues : MonoBehaviour
 {
     public Transform PointApparition;
 
@@ -11,7 +11,7 @@ public class ApparitionEnemies : MonoBehaviour
     public GameObject Vague2;
 
     //
-    public int noVague = 1;
+    public static int noVague = 1;
 
     
     // Start is called before the first frame update
