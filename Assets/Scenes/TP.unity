@@ -995,7 +995,7 @@ Transform:
   m_GameObject: {fileID: 116186952}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 10}
+  m_LocalPosition: {x: 0, y: 1.5, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1016,6 +1016,7 @@ MonoBehaviour:
   PointApparition: {fileID: 116186953}
   Vague1: {fileID: 3028404132365342739, guid: bddf4431183083040bb1d7ad4a04b7f7, type: 3}
   Vague2: {fileID: 2171188680575312283, guid: bbc4b5618e8f0eb449c5829814c34b19, type: 3}
+  Vague3: {fileID: 7407265344806127607, guid: 4c7e9d4658e662740b90596fc2395423, type: 3}
 --- !u!1 &161651203
 GameObject:
   m_ObjectHideFlags: 0
@@ -2082,7 +2083,7 @@ GameObject:
   - component: {fileID: 487078441}
   m_Layer: 0
   m_Name: Joueur
-  m_TagString: Untagged
+  m_TagString: Joueur
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5339,7 +5340,7 @@ GameObject:
   - component: {fileID: 1220706931}
   m_Layer: 0
   m_Name: Bouclier
-  m_TagString: Untagged
+  m_TagString: Bouclier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -22,12 +22,22 @@ public class ComportementTorpilleKlaed : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D InfoCollision)
     {
         // Détruit le projectile s'il entre en contacte avec un collider
-        Destroy(gameObject);
+        if(InfoCollision.gameObject.tag == "Joueur" || InfoCollision.gameObject.tag == "ProjectileJoueur")
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D InfoCollision)
     {
         // Détruit le projectile s'il entre en contacte avec un collider
-        Destroy(gameObject);
+        if(InfoCollision.gameObject.tag == "Bouclier")
+        {
+            Destroy(gameObject);
+        }
     }
 }

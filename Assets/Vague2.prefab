@@ -227,7 +227,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Vitesse: 0.1
-  noVague: 1
 --- !u!1 &2206852240848552960
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,7 +267,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3434707575500463678}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CombattantNairan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -716,7 +715,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2860113942513789452}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CombattantNairan (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -748,7 +747,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1317094176978953258}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CombattantNairan (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -780,7 +779,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6867740853038543193}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CombattantNairan (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1051,7 +1050,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7838397451428356528}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CombattantNairan (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

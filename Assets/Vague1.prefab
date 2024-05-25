@@ -188,7 +188,7 @@ GameObject:
   - component: {fileID: 2165116972541755407}
   - component: {fileID: 5924884435176318560}
   - component: {fileID: 7155640283738096051}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CombattantKlaed  (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -350,7 +350,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TorpillePrefab: {fileID: 1454187440716949623, guid: fde323485b8e3d545b82d3e1a332702f, type: 3}
   PositionLancement: {fileID: 7724869606336649718}
-  MainCamera: {fileID: 0}
+  signal: 0
 --- !u!1 &3657737795642811381
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,7 +365,7 @@ GameObject:
   - component: {fileID: 7611914213557994728}
   - component: {fileID: 6529719625526085777}
   - component: {fileID: 3792283376827191195}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 'CombattantKlaed '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -527,7 +527,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TorpillePrefab: {fileID: 1454187440716949623, guid: fde323485b8e3d545b82d3e1a332702f, type: 3}
   PositionLancement: {fileID: 5854916541420294582}
-  MainCamera: {fileID: 0}
+  signal: 0
 --- !u!1 &6513131520046238094
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,7 +542,7 @@ GameObject:
   - component: {fileID: 652615061780392201}
   - component: {fileID: 4249908759898704576}
   - component: {fileID: 8397285927662337462}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CombattantKlaed  (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -704,7 +704,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TorpillePrefab: {fileID: 1454187440716949623, guid: fde323485b8e3d545b82d3e1a332702f, type: 3}
   PositionLancement: {fileID: 785493597567479844}
-  MainCamera: {fileID: 0}
+  signal: 0
 --- !u!1 &7045364724094555819
 GameObject:
   m_ObjectHideFlags: 0
@@ -719,7 +719,7 @@ GameObject:
   - component: {fileID: 7684906234658524290}
   - component: {fileID: 6555611733456743650}
   - component: {fileID: 3044615234315635002}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CombattantKlaed  (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -881,7 +881,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TorpillePrefab: {fileID: 1454187440716949623, guid: fde323485b8e3d545b82d3e1a332702f, type: 3}
   PositionLancement: {fileID: 7687788422902349603}
-  MainCamera: {fileID: 0}
+  signal: 0
 --- !u!1 &7097647447056947869
 GameObject:
   m_ObjectHideFlags: 0
@@ -896,7 +896,7 @@ GameObject:
   - component: {fileID: 2294164793447730796}
   - component: {fileID: 6669552470871932445}
   - component: {fileID: 490578217989736273}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CombattantKlaed  (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1058,7 +1058,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TorpillePrefab: {fileID: 1454187440716949623, guid: fde323485b8e3d545b82d3e1a332702f, type: 3}
   PositionLancement: {fileID: 723173407200697470}
-  MainCamera: {fileID: 0}
+  signal: 0
 --- !u!1 &7308224936708164605
 GameObject:
   m_ObjectHideFlags: 0
