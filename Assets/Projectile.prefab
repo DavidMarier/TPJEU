@@ -194,6 +194,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Vitesse: 5
+  Points: 0
+  TxtPointage: {fileID: 0}
 --- !u!50 &3945403323502040669
 Rigidbody2D:
   serializedVersion: 4
@@ -220,7 +222,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 2
+  m_Constraints: 6
 --- !u!95 &1754125700225571975
 Animator:
   serializedVersion: 7

@@ -1,11 +1,11 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
+using TMPro;
 
 public class ComportementProjectile : MonoBehaviour
 {
     public float Vitesse = 5f;
-
 
     private void Update()
     {   
@@ -20,7 +20,7 @@ public class ComportementProjectile : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D infoCollision)
+    public void OnCollisionEnter2D(Collision2D infoCollision)
     {
         // Détruit le projectile s'il entre en contacte avec un collider
         Destroy(gameObject);

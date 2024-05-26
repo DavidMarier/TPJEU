@@ -105,7 +105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TorpillePrefab: {fileID: 4866677286634038133, guid: 712da6b8a5ffd704ba86bc367d8c5960, type: 3}
   PositionLancement: {fileID: 2594570428280979207}
-  signal: 1
+  signal: 0
 --- !u!58 &7930629832339363347
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -395,7 +395,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TorpillePrefab: {fileID: 4866677286634038133, guid: 712da6b8a5ffd704ba86bc367d8c5960, type: 3}
   PositionLancement: {fileID: 2815630120280968772}
-  signal: 1
+  signal: 0
 --- !u!58 &93635997269464617
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -634,7 +634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TorpillePrefab: {fileID: 4866677286634038133, guid: 712da6b8a5ffd704ba86bc367d8c5960, type: 3}
   PositionLancement: {fileID: 1320078086923315490}
-  signal: 1
+  signal: 0
 --- !u!58 &1196247828461824012
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -969,7 +969,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TorpillePrefab: {fileID: 4866677286634038133, guid: 712da6b8a5ffd704ba86bc367d8c5960, type: 3}
   PositionLancement: {fileID: 3935712352445735749}
-  signal: 1
+  signal: 0
 --- !u!58 &8278211678397776585
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1178,7 +1178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TorpillePrefab: {fileID: 4866677286634038133, guid: 712da6b8a5ffd704ba86bc367d8c5960, type: 3}
   PositionLancement: {fileID: 5978381409948197226}
-  signal: 1
+  signal: 0
 --- !u!58 &2317298737399555863
 CircleCollider2D:
   m_ObjectHideFlags: 0

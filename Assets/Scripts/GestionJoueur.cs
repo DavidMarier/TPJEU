@@ -7,7 +7,7 @@ public class GestionJoueur : MonoBehaviour
 {
     public float VitesseDeplacement;
     private int PointDeVie = 4;
-    private bool PeutActiverBouclier = true;
+    public static bool PeutActiverBouclier = true;
     private bool Mort = false;
     
 
@@ -22,7 +22,7 @@ public class GestionJoueur : MonoBehaviour
 
     void Start()
     {
-        
+        PeutActiverBouclier = true;
     }
 
     // Update is called once per frame
@@ -83,6 +83,7 @@ public class GestionJoueur : MonoBehaviour
         if(PointDeVie <= 0)
         {
             Mort = true;
+            GetComponent<Collider2D>().enabled = false;
         }
 
         StartCoroutine(ApparenceJoueur(Explosion));

@@ -10,13 +10,27 @@ public class GestionApparitionVagues : MonoBehaviour
     public GameObject Vague1;
     public GameObject Vague2;
     public GameObject Vague3;
+    public GameObject Vague4;
+    public GameObject Vague5;
+    public GameObject Vague6;
+    public GameObject Vague7;
+    public GameObject Vague8;
+    public GameObject Vague9;
+    public GameObject Vague10;
 
     // Vagues apparues
     private bool Vague2Bool = false;
     private bool Vague3Bool = false;
+    private bool Vague4Bool = false;
+    private bool Vague5Bool = false;
+    private bool Vague6Bool = false;
+    private bool Vague7Bool = false;
+    private bool Vague8Bool = false;
+    private bool Vague9Bool = false;
+    private bool Vague10Bool = false;
 
-    // Numéro de la vague
-    public static int noVague = 1;
+    // Numéro de la vague // ! Pour tester les vagues, changer ce numéro !
+    public static int noVague = 10;
 
     
     // Start is called before the first frame update
@@ -40,6 +54,42 @@ public class GestionApparitionVagues : MonoBehaviour
             Vague3Bool = true;
             GenererEnemies(Vague3);
         }
+        if(noVague == 4 && !Vague4Bool)
+        {
+            Vague4Bool = true;
+            GenererEnemies(Vague4);
+        }
+        if(noVague == 5 && !Vague5Bool)
+        {
+            Vague5Bool = true;
+            GenererEnemies(Vague5);
+        }
+        if(noVague == 6 && !Vague6Bool)
+        {
+            Vague6Bool = true;
+            GenererEnemies(Vague6);
+        }
+        if(noVague == 7 && !Vague7Bool)
+        {
+            Vague7Bool = true;
+            GenererEnemies(Vague7);
+        }
+        if(noVague == 8 && !Vague8Bool)
+        {
+            Vague8Bool = true;
+            GenererEnemies(Vague8);
+        }
+        if(noVague == 9 && !Vague9Bool)
+        {
+            Vague9Bool = true;
+            GenererEnemies(Vague9);
+        }
+        if(noVague == 10 && !Vague10Bool)
+        {
+            Vague10Bool = true;
+            GenererEnemies(Vague10);
+        }
+
     }
     public void GenererEnemies(GameObject Vague)
     {
