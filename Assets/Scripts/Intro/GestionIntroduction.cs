@@ -8,6 +8,8 @@ public class GestionIntroduction : MonoBehaviour
 {
     private Image ImageNoire;
 
+    public AudioClip SonDebut;
+
     void Start()
     {
         ImageNoire = GetComponent<Image>();
@@ -20,6 +22,7 @@ public class GestionIntroduction : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {   
             StartCoroutine(Fondu());
+            GetComponent<AudioSource>().PlayOneShot(SonDebut);
         }
     }
 
@@ -33,7 +36,7 @@ public class GestionIntroduction : MonoBehaviour
 
         while(TempsEcoule < DureeFondu) 
         {
-            // Calcule par interpolation la valeur alpha de 1 à 0
+            // Calcule par interpolation la valeur alpha de 0 à 1
             float Alpha = Mathf.Lerp(0f, 1f, TempsEcoule / DureeFondu);
             // Assigne à une NouvelleCouleur la couleur de l'image noire
             Color NouvelleCouleur = ImageNoire.color;

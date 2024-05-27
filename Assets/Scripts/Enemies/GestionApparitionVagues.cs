@@ -17,6 +17,7 @@ public class GestionApparitionVagues : MonoBehaviour
     public GameObject Vague8;
     public GameObject Vague9;
     public GameObject Vague10;
+    public GameObject Vague11;
 
     // Vagues apparues
     private bool Vague2Bool = false;
@@ -28,14 +29,18 @@ public class GestionApparitionVagues : MonoBehaviour
     private bool Vague8Bool = false;
     private bool Vague9Bool = false;
     private bool Vague10Bool = false;
+    private bool Vague11Bool = false;
 
-    // Numéro de la vague // ! Pour tester les vagues, changer ce numéro !
-    public static int noVague = 10;
+    // Numéro de la vague en cours
+    public static int noVague = 1;
 
     
     // Start is called before the first frame update
     void Start()
     {
+        // ! Pour tester les vagues, changer ce numéro !
+        noVague = 1;
+
         if(noVague == 1)
         {
             GenererEnemies(Vague1);
@@ -88,6 +93,11 @@ public class GestionApparitionVagues : MonoBehaviour
         {
             Vague10Bool = true;
             GenererEnemies(Vague10);
+        }
+        if(noVague == 11 && !Vague11Bool)
+        {
+            Vague11Bool = true;
+            GenererEnemies(Vague11);
         }
 
     }

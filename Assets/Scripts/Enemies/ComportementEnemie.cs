@@ -6,6 +6,8 @@ public class ComportementEnemie : MonoBehaviour // ComportementEnnemie
 {
     public AnimationClip Explosion;
 
+    public AudioClip SonExplosion;
+
     public static int Points = 0;
 
     public static bool Collision = false;
@@ -22,6 +24,7 @@ public class ComportementEnemie : MonoBehaviour // ComportementEnnemie
         // D�truit l'ennemie s'il entre en contacte avec un collider
         if(InfoCollision.gameObject.tag == "ProjectileJoueur")
         {
+            GetComponent<AudioSource>().PlayOneShot(SonExplosion);
             Destroy(gameObject, Explosion.length);
             GetComponent<Animator>().SetTrigger("explose");
             Points++;

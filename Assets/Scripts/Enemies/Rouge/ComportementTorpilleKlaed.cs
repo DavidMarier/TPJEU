@@ -26,10 +26,6 @@ public class ComportementTorpilleKlaed : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        else
-        {
-            
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D InfoCollision)

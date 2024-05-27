@@ -19,6 +19,8 @@ public class GererVagueEnemies : MonoBehaviour
         Vagues();
         // G�re la trajectoire de la vague
         transform.Translate(Vector2.down * Vitesse * Time.deltaTime);
+
+        VagueBoss();
     }
 
     void Vagues()
@@ -30,6 +32,7 @@ public class GererVagueEnemies : MonoBehaviour
         GestionCroiseNairan[] lesCroisesNairan;
         GestionCuirasseKlaed[] lesCuirasseKlaed;
         GestionCuirasseNairan[] lesCuirasseNairan;
+        GestionBoss Boss;
         Vector2 Position = transform.position;
         
         if (Position.y < 1.25f)
@@ -41,6 +44,7 @@ public class GererVagueEnemies : MonoBehaviour
             lesCroisesNairan = GetComponentsInChildren<GestionCroiseNairan>();
             lesCuirasseKlaed = GetComponentsInChildren<GestionCuirasseKlaed>();
             lesCuirasseNairan = GetComponentsInChildren<GestionCuirasseNairan>();
+            Boss = GetComponentInChildren<GestionBoss>();
 
             foreach (GestionCombattantKlaed leVaisseau in lesVaisseauxKlaed)
             {
@@ -76,6 +80,11 @@ public class GererVagueEnemies : MonoBehaviour
             {
                 leCuirasse.signal = true;
             }
+
+            if(GestionApparitionVagues.noVague == 11)
+            {
+                Boss.signal = true;
+            }
         }
         else
         {
@@ -86,6 +95,7 @@ public class GererVagueEnemies : MonoBehaviour
             lesCroisesNairan = GetComponentsInChildren<GestionCroiseNairan>();
             lesCuirasseKlaed = GetComponentsInChildren<GestionCuirasseKlaed>();
             lesCuirasseNairan = GetComponentsInChildren<GestionCuirasseNairan>();
+            Boss = GetComponentInChildren<GestionBoss>();
 
             foreach (GestionCombattantKlaed leVaisseau in lesVaisseauxKlaed)
             {
@@ -121,15 +131,31 @@ public class GererVagueEnemies : MonoBehaviour
             {
                 leCuirasse.signal = false;
             }
+
+            if(GestionApparitionVagues.noVague == 11)
+            {
+                Boss.signal = false;
+            }
         }
 
         // Si la vague dépasse le bas de l'écran, elle se détruit et on passe à la prochaine
         if(Position.y < -2)
         {
-            Debug.Log("ok");
             GestionApparitionVagues.noVague++;
             Destroy(gameObject);
-            Debug.Log(GestionApparitionVagues.noVague);
+        }
+    }
+
+    public void VagueBoss()
+    {
+        Vector2 Position = transform.position;
+
+        if(GestionApparitionVagues.noVague == 11)
+        {
+            if(Position.y < 0)
+            {
+                Vitesse = 0;
+            }
         }
     }
 
@@ -138,10 +164,8 @@ public class GererVagueEnemies : MonoBehaviour
     {
         if (transform.childCount < 1)
         {
-            Debug.Log("ok");
             GestionApparitionVagues.noVague++;
             Destroy(gameObject);
-            Debug.Log(GestionApparitionVagues.noVague);
         }
     }
 }

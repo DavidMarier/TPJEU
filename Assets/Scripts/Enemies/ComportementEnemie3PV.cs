@@ -5,6 +5,8 @@ using UnityEngine;
 public class ComportementEnemie3PV : MonoBehaviour
 {
     public AnimationClip Explosion;
+    
+    public AudioClip SonExplosion;
 
     private int vies = 3;
 
@@ -17,6 +19,7 @@ public class ComportementEnemie3PV : MonoBehaviour
 
             if(vies == 0)
             {
+                GetComponent<AudioSource>().PlayOneShot(SonExplosion);
                Destroy(gameObject, Explosion.length);
                 GetComponent<Animator>().SetTrigger("explose");
                 // Partage les mêmes variables que ComportementEnemie

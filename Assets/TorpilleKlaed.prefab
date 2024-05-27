@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3114424295371123708}
   - component: {fileID: 7970685721843051383}
   - component: {fileID: 1454187440716949623}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TorpilleKlaed
   m_TagString: ProjectileEnemie
   m_Icon: {fileID: 0}

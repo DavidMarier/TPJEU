@@ -11,5 +11,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TP.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Defaite.unity
+    guid: e05f9d5b185cdab46ae12e20a3f04308
+  - enabled: 1
+    path: Assets/Scenes/Victoire.unity
+    guid: 7b349ad6c793aa749a4f029881f7948a
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

@@ -8,6 +8,7 @@ using UnityEngine.UIElements;
 public class TexteIntroduction : MonoBehaviour
 {
     public GameObject CommencerJeu;
+
     private bool TexteVisible = false;
 
     // Start is called before the first frame update

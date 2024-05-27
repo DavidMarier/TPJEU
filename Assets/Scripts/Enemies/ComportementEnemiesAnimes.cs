@@ -7,13 +7,14 @@ public class ComportementEnemiesAnimes : MonoBehaviour //ComportementEnnemiesAni
     // Start is called before the first frame update
     public AnimationClip Explosion;
 
-
+    public AudioClip SonExplosion;
 
     private void OnCollisionEnter2D(Collision2D InfoCollision)
     {
         // D�truit l'ennemie s'il entre en contacte avec un collider
         if(InfoCollision.gameObject.tag == "ProjectileJoueur")
         {
+            GetComponent<AudioSource>().PlayOneShot(SonExplosion);
             Destroy(gameObject, Explosion.length);
             GetComponent<Animator>().SetTrigger("explose");
             // Partage les mêmes variables que ComportementEnemie
