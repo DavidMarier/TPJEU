@@ -8,25 +8,47 @@ using UnityEngine.UI;
 
 public class GestionJoueur : MonoBehaviour
 {
+    // La vitesse à laquelle se déplace le joueur
     public float VitesseDeplacement;
-    private int PointDeVie = 4;
-    public static bool PeutActiverBouclier = true;
-    private bool Mort = false;
-    
 
+    // Points de vie du joueur
+    private int PointDeVie = 4;
+
+    // Détermine si le joueur peut activer le bouclier
+    public static bool PeutActiverBouclier = true;
+
+    // Détermine si le joueur est mort
+    private bool Mort = false;
+
+    // Détermine si le joueur peut tirer
+    private bool PeutTirer = true;
+    
+    // Le Bouclier
     public GameObject Bouclier;
+
+    // Le moteur
     public GameObject Moteur;
 
+    // Prefab de la torpille
     public ComportementProjectile ProjectilePrefab;
 
+    // La position de lancement des torpilles
     public Transform PositionLancement;
 
+    // Clip d'animation d'explosion
     public AnimationClip Explosion;
 
+    // Image du fondu
     public Image ImageNoire;
 
+    // Son de l'explosion
     public AudioClip SonMort;
+
+    // Son du bouclier
     public AudioClip SonBouclier;
+
+    // Son du tire
+    public AudioClip SonTire;
 
     void Start()
     {
@@ -58,9 +80,12 @@ public class GestionJoueur : MonoBehaviour
         transform.Translate(new Vector2(DeplacementX, DeplacementY));
 
         // Gère l'attaque
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && PeutTirer)
         {         
             Instantiate(ProjectilePrefab, PositionLancement.position, transform.rotation);
+            PeutTirer = false;
+            GetComponent<AudioSource>().PlayOneShot(SonTire);
+            Invoke("DelaisRecuperationTire", 0.5f);
         }
         // Gère le bouclier
         if (Input.GetKey(KeyCode.E) && PeutActiverBouclier)
@@ -102,6 +127,11 @@ public class GestionJoueur : MonoBehaviour
         }
 
         StartCoroutine(ApparenceJoueur(Explosion));
+    }
+
+    void DelaisRecuperationTire()
+    {
+        PeutTirer = true;
     }
 
     // Gère les animations du joueur quand il se prend des dégats et transitoinne vers la scène de défaite

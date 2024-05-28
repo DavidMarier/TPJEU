@@ -11,7 +11,7 @@ public class ComportementBoss : MonoBehaviour
     public AudioClip SonExplosion;
 
     // Les points de vie du boss
-    private int vies = 100;
+    private int vies = 50;
 
     // Indique si le boss est mort
     public static bool mortBoss = false;
