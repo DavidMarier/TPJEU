@@ -2224,6 +2224,7 @@ MonoBehaviour:
   SonMort: {fileID: 8300000, guid: e0c30fcc66cc1f4429273095b418cffa, type: 3}
   SonBouclier: {fileID: 8300000, guid: 3346bc506a5aed64aa4b1b4f594333e2, type: 3}
   SonTire: {fileID: 8300000, guid: 28fd72e52c36d4e4da11e2001d532ae8, type: 3}
+  SonTouche: {fileID: 8300000, guid: 532fe930735524241a7eaff70421f39b, type: 3}
 --- !u!114 &487078439
 MonoBehaviour:
   m_ObjectHideFlags: 0

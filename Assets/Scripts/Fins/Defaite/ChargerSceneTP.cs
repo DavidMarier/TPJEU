@@ -18,6 +18,9 @@ public class ChargerSceneTP : MonoBehaviour
             StartCoroutine(FonduIntroduction());
             // On charge la scène de jeu après 2 secondes
             Invoke("ChargerTP", 2f);
+            // On remet les points à 0
+            ComportementEnemie.Points = 0;
+
         }
     }
 

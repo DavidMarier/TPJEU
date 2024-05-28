@@ -50,6 +50,9 @@ public class GestionJoueur : MonoBehaviour
     // Son du tire
     public AudioClip SonTire;
 
+    // Son du joueur quand il se prend des dégats
+    public AudioClip SonTouche;
+
     void Start()
     {
         PeutActiverBouclier = true;
@@ -118,12 +121,14 @@ public class GestionJoueur : MonoBehaviour
         if(InfoCollision.gameObject && PointDeVie > 0)
         {
             PointDeVie--;
+            GetComponent<AudioSource>().PlayOneShot(SonTouche);
         }
 
         if(PointDeVie <= 0)
         {
             Mort = true;
             GetComponent<Collider2D>().enabled = false;
+            GetComponent<AudioSource>().PlayOneShot(SonMort);
         }
 
         StartCoroutine(ApparenceJoueur(Explosion));
@@ -153,7 +158,6 @@ public class GestionJoueur : MonoBehaviour
         {
             GetComponent<Animator>().SetTrigger("explose");
             Moteur.SetActive(false);
-            GetComponent<AudioSource>().PlayOneShot(SonMort);
             StartCoroutine(FonduFin());
             yield return new WaitForSeconds(Clip.length);
             Defaite();
