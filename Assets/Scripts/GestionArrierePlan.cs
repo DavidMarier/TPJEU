@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class GestionArrierePlan : MonoBehaviour
 {
+    // Détermine la vitesse de l'arrière plan
     public float Vitesse;
+
+    // Détermine la position initiale de l'arrière plan
     public float PositionDebut;
+
+    // Détermine la position finale de l'arrière plan
     public float PositionFin;
 
     // Update is called once per frame

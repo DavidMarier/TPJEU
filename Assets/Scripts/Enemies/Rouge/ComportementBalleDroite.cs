@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class ComportementBalleDroite : MonoBehaviour
 {
+    // Indique la vitesse d'une balle
     public float Vitesse = 0.3f;
+    
     // Start is called before the first frame update
     void Start()
     {

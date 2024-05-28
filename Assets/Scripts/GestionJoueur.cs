@@ -139,6 +139,8 @@ public class GestionJoueur : MonoBehaviour
         SceneManager.LoadScene("Defaite");
     }
 
+    // Quand le joueur gagne, mène à la scène de victoire
+    
     void Victoire()
     {
         SceneManager.LoadScene("Victoire");

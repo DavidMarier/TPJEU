@@ -3,40 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using TMPro;
 
-public class GestionIntroduction : MonoBehaviour
+public class ChargerSceneIntroduction : MonoBehaviour
 {
-    private Image ImageNoire;
+    public Image ImageNoire;
 
-    public AudioClip SonDebut;
-
-    public TextMeshProUGUI AffichageMeilleurScore;
-
-    public static int MeilleurScore;
-
-    void Start()
-    {
-        ImageNoire = GetComponent<Image>();
-        AffichageMeilleurScore.text = "Meilleur score : " + MeilleurScore;
-        ComportementBoss.mortBoss = false;
-        ComportementEnemie.Points = 0;
-    }
-
-    // Update is called once per frame
     void Update()
-    {   
-        // Permet de commencer le jeu en chargeant la scène "TP". 
+    {
+        // Si on appuie sur la barre d'espace...
         if(Input.GetKeyDown(KeyCode.Space))
-        {   
-            StartCoroutine(Fondu());
-            GetComponent<AudioSource>().PlayOneShot(SonDebut);
-            
+        {
+            // On commence le fondu
+            StartCoroutine(FonduIntroduction());
+            // On charge l'écran titre après 2 secondes
+            Invoke("ChargerIntroduction", 2f);
         }
     }
 
+    // Charge la scène d'introduction
+    void ChargerIntroduction()
+    {
+        SceneManager.LoadScene("Introduction");
+    }
+    
     // Déclare la coroutine Fondu()
-    IEnumerator Fondu()
+    IEnumerator FonduIntroduction()
     {
         // Détermine la durée du fondu
         float DureeFondu = 2f;
@@ -57,14 +48,7 @@ public class GestionIntroduction : MonoBehaviour
             TempsEcoule += Time.deltaTime;
 
             yield return null;
-            // Appel la fonction CommencerJeu avec un délais de 3 secondes
-            Invoke("CommencerJeu", 3f);
+            
         }
-    }
-
-    void CommencerJeu()
-    {   
-        // Charge la scène "TP"
-        SceneManager.LoadScene("TP");
     }
 }

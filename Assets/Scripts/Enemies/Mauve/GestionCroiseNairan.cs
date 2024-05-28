@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class GestionCroiseNairan : MonoBehaviour
 {
+    // Prefab de la torpille
     public ComportementTorpilleNairan TorpillePrefab;
+
+    // Détermine la position de lancement des torpilles
     public Transform PositionLancement;
+
+    // Déclare un signal qui indique si l'ennemie peut tirer
     public bool signal = false;
 
 
@@ -17,12 +22,15 @@ public class GestionCroiseNairan : MonoBehaviour
 
     void Actions()
     {
+        // Si le signal est actif...
         if(signal)
         {
+            // Tire
             StartCoroutine(Tire());
         }
     }
 
+    // Instancie les torpilles avec un délais aléatoire entre 0 et 2 secondes
     IEnumerator Tire()
     {
         float delaisTire = Random.Range(0, 2f);

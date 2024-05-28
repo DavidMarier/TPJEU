@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7771dd1b123529d4b88d9fdce736705b
+guid: 60cb8ef188744ec4ca3842b18ba7a8ce
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - BIGMACCA
+  - Future Earth
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

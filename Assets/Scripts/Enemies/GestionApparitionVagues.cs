@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GestionApparitionVagues : MonoBehaviour
 {
+    // Point d'apparition des vagues
     public Transform PointApparition;
 
     // Vagues
@@ -35,7 +36,7 @@ public class GestionApparitionVagues : MonoBehaviour
     public static int noVague = 1;
 
     
-    // Start is called before the first frame update
+    // Gère l'apparitionde la première vague
     void Start()
     {
         // ! Pour tester les vagues, changer ce numéro !
@@ -47,6 +48,7 @@ public class GestionApparitionVagues : MonoBehaviour
         }
     }
 
+    // Gère l'apparition des autres vagues
     public void Update()
     {
         if(noVague == 2 && !Vague2Bool)
@@ -101,6 +103,8 @@ public class GestionApparitionVagues : MonoBehaviour
         }
 
     }
+
+    // Instancie les vagues
     public void GenererEnemies(GameObject Vague)
     {
         Instantiate(Vague, PointApparition.position, transform.rotation);

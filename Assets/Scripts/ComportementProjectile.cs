@@ -5,6 +5,7 @@ using TMPro;
 
 public class ComportementProjectile : MonoBehaviour
 {
+    // Détermine la vitesse d'un projectile
     public float Vitesse = 5f;
 
     private void Update()

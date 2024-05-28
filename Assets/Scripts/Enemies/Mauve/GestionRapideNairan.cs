@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class GestionRapideNairan : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // Prefab de la torpille
     public ComportementTorpilleNairan TorpillePrefab;
+
+    // Détermine les positions de lancement des torpilles
     public Transform PositionLancement;
     public Transform PositionLancement2;
+
+    // Déclare un signal qui indique si l'ennemie peut tirer
     public bool signal = false;
 
 
@@ -19,12 +23,15 @@ public class GestionRapideNairan : MonoBehaviour
 
     void Actions()
     {
+        // Si le signal est actif...
         if(signal)
         {
+            // Tire
             StartCoroutine(Tire());
         }
     }
 
+    // Instancie les torpilles avec un délais aléatoire de 0 à 1 seconde
     IEnumerator Tire()
     {
         float delaisTire = Random.Range(0, 1f);

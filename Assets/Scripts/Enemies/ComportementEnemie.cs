@@ -4,18 +4,20 @@ using UnityEngine;
 
 public class ComportementEnemie : MonoBehaviour // ComportementEnnemie
 {
+    // Clip d'animation d'explosion
     public AnimationClip Explosion;
 
+    // Son de l'explosion
     public AudioClip SonExplosion;
 
-    public static int Points = 0;
+    // Déclare les points
+    public static int Points;
 
     public static bool Collision = false;
 
+
     void Start()
     {
-        Points = 0;
-
         Collision = false;
     }
 
@@ -24,11 +26,16 @@ public class ComportementEnemie : MonoBehaviour // ComportementEnnemie
         // D�truit l'ennemie s'il entre en contacte avec un collider
         if(InfoCollision.gameObject.tag == "ProjectileJoueur")
         {
+            // Joue le son de l'explosion
             GetComponent<AudioSource>().PlayOneShot(SonExplosion);
+            // Détruit le gameObject
             Destroy(gameObject, Explosion.length);
+            // Anime l'explosion
             GetComponent<Animator>().SetTrigger("explose");
+            // Incrémente les points
             Points++;
             Collision = true;
+            // Désactive les collisions
             GetComponent<Collider2D>().enabled = false;
         }
         

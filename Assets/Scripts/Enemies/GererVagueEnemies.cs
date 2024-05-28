@@ -6,6 +6,7 @@ using UnityEngine.UIElements;
 
 public class GererVagueEnemies : MonoBehaviour
 {
+    // Détermine la vitesse d'une vague
     public float Vitesse = 0.1f;
 
     public void Update()
@@ -23,6 +24,7 @@ public class GererVagueEnemies : MonoBehaviour
         VagueBoss();
     }
 
+    // Gère l'activation du signal de chaque vaisseau quand il arrive à une certaine position y
     void Vagues()
     {
         GestionCombattantKlaed[] lesVaisseauxKlaed;
@@ -146,6 +148,7 @@ public class GererVagueEnemies : MonoBehaviour
         }
     }
 
+    // Quand la vague du boss arrive à la position y 0, elle cesse d'avancer
     public void VagueBoss()
     {
         Vector2 Position = transform.position;

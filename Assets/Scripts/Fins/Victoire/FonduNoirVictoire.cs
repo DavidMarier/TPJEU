@@ -5,11 +5,14 @@ using UnityEngine.UI;
 
 public class FonduNoirVictoire : MonoBehaviour
 {
+    // Image noire du fondu
     private Image ImageNoire;
+
     // Start is called before the first frame update
     void Start()
     {
         ImageNoire = GetComponent<Image>();
+        // Commence le fondu
         StartCoroutine(Fondu());
     }
 

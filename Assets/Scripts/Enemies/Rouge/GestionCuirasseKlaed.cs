@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class GestionCuirasseKlaed : MonoBehaviour
 {
+    // Prefab de la torpille
     public ComportementTorpilleKlaed TorpillePrefab;
+
+    // Détermine les positions de lancement des torpilles 
     public Transform PositionLancement;
     public Transform PositionLancement2;
     public Transform PositionLancement3;
+
+    // Déclare un signal qui indique si l'ennemie peut tirer
     public bool signal = false;
 
 
@@ -19,12 +24,15 @@ public class GestionCuirasseKlaed : MonoBehaviour
 
     void Actions()
     {
+        // Si le signal est actif...
         if(signal)
         {
+            // Tire
             StartCoroutine(Tire());
         }
     }
 
+    // Instancie les torpille avec un délais aléatoire entre 0 et 1.5 secondes
     IEnumerator Tire()
     {
         float delaisTire = Random.Range(0, 1.5f);
