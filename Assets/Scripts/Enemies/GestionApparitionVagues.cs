@@ -34,7 +34,6 @@ public class GestionApparitionVagues : MonoBehaviour
 
     // Numéro de la vague en cours
     public static int noVague = 1;
-
     
     // Gère l'apparitionde la première vague
     void Start()

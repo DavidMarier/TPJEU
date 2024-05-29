@@ -12,7 +12,7 @@ public class GestionJoueur : MonoBehaviour
     public float VitesseDeplacement;
 
     // Points de vie du joueur
-    private int PointDeVie = 4;
+    public static int PointDeVie = 4;
 
     // Détermine si le joueur peut activer le bouclier
     public static bool PeutActiverBouclier = true;
@@ -56,6 +56,7 @@ public class GestionJoueur : MonoBehaviour
     void Start()
     {
         PeutActiverBouclier = true;
+        PointDeVie = 4;
     }
 
     // Update is called once per frame
@@ -105,7 +106,7 @@ public class GestionJoueur : MonoBehaviour
     {
         Bouclier.SetActive(true);
         Bouclier.GetComponent<CircleCollider2D>().enabled = true;
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(1);
         Bouclier.SetActive(false);
         Bouclier.GetComponent<CircleCollider2D>().enabled = false;
         yield return null;

@@ -18,15 +18,21 @@ public class AffichageUI : MonoBehaviour
     // Un décompte qui indique quand le bouclier redevient disponible
     public int DecompteBouclier = 20;
 
+    // Affiche le numéro de la vague actuelle
+    public TextMeshProUGUI AffichageNuméroVague;
+
     // Start is called before the first frame update
     void Start()
     {
         RafraichissementBouclier.text = "E";
+
+        StartCoroutine(FonduTexteVague());
     }
 
     // Update is called once per frame
     void Update()
     {
+
         // Actualise le pointage quand un ennemie est détruit
         if(ComportementEnemie.Collision)
         {
@@ -39,6 +45,11 @@ public class AffichageUI : MonoBehaviour
         {
             StartCoroutine(Decompte());
         }
+    }
+
+    IEnumerator FonduTexteVague()
+    {
+        yield return new WaitForSeconds(0);
     }
 
     // Gère le décompte

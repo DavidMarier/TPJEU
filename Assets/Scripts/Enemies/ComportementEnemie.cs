@@ -26,6 +26,8 @@ public class ComportementEnemie : MonoBehaviour // ComportementEnnemie
         // D�truit l'ennemie s'il entre en contacte avec un collider
         if(InfoCollision.gameObject.tag == "ProjectileJoueur")
         {
+
+            GetComponent<GestionCombattantKlaed>().signal = false;
             // Joue le son de l'explosion
             GetComponent<AudioSource>().PlayOneShot(SonExplosion);
             // Détruit le gameObject
