@@ -19,15 +19,16 @@ public class AffichageUI : MonoBehaviour
     public int DecompteBouclier = 20;
 
     // Affiche le numéro de la vague actuelle
-    public TextMeshProUGUI AffichageNuméroVague;
+    public TextMeshProUGUI AffichageNumeroVague;
 
     // Start is called before the first frame update
     void Start()
     {
         RafraichissementBouclier.text = "E";
 
-        StartCoroutine(FonduTexteVague());
+        // StartCoroutine(AffichageTexteVague());
     }
+    
 
     // Update is called once per frame
     void Update()
@@ -45,11 +46,6 @@ public class AffichageUI : MonoBehaviour
         {
             StartCoroutine(Decompte());
         }
-    }
-
-    IEnumerator FonduTexteVague()
-    {
-        yield return new WaitForSeconds(0);
     }
 
     // Gère le décompte
@@ -77,4 +73,102 @@ public class AffichageUI : MonoBehaviour
         // On remet le compteur à 20
         DecompteBouclier = 20;
     }
+
+
+    // Gère l'affichage du numéro de la vague actuelle
+
+    // IEnumerator AffichageTexteVague()
+    // {
+    //     if(true)
+    //     {
+    //         switch(GestionApparitionVagues.noVague)
+    //         {
+    //             case 1:
+    //                 StartCoroutine(FonduTexteVagueAvant());
+    //                 AffichageNumeroVague.text = "Vague " + GestionApparitionVagues.noVague;
+    //                 yield return new WaitForSeconds(1);
+    //                 StartCoroutine(FonduTexteVagueApres());
+    //             break;
+    //             case 2: 
+    //                 AffichageNumeroVague.text = "Vague " + GestionApparitionVagues.noVague; 
+    //             break;
+    //             case 3: 
+    //                 AffichageNumeroVague.text = "Vague " + GestionApparitionVagues.noVague; 
+    //             break;
+    //             case 4: 
+    //                 AffichageNumeroVague.text = "Vague " + GestionApparitionVagues.noVague; 
+    //             break;
+    //             case 5: 
+    //                 AffichageNumeroVague.text = "Vague " + GestionApparitionVagues.noVague; 
+    //             break;
+    //             case 6: 
+    //                 AffichageNumeroVague.text = "Vague " + GestionApparitionVagues.noVague; 
+    //             break;
+    //             case 7: 
+    //                 AffichageNumeroVague.text = "Vague " + GestionApparitionVagues.noVague; 
+    //             break;
+    //             case 8: 
+    //                 AffichageNumeroVague.text = "Vague " + GestionApparitionVagues.noVague; 
+    //             break;
+    //             case 9: 
+    //                 AffichageNumeroVague.text = "Vague " + GestionApparitionVagues.noVague; 
+    //             break;
+    //             case 10: 
+    //                 AffichageNumeroVague.text = "Vague " + GestionApparitionVagues.noVague; 
+    //             break;
+    //             case 11: 
+    //                 AffichageNumeroVague.text = "Boss"; 
+    //             break;
+                
+    //         } 
+    //         yield return new WaitForSeconds(0);
+    //     }
+    // }
+
+    // IEnumerator FonduTexteVagueApres()
+    // {
+    //     // Détermine la durée du fondu
+    //     float DureeFondu = 1f;
+
+    //     float TempsEcoule = 0f;
+
+    //     while(TempsEcoule < DureeFondu) 
+    //     {
+    //         // Calcule par interpolation la valeur alpha de 1 à 0
+    //         float Alpha = Mathf.Lerp(1f, 0f, TempsEcoule / DureeFondu);
+    //         // Assigne à une NouvelleCouleur la couleur du texte
+    //         Color NouvelleCouleur = AffichageNumeroVague.color;
+    //         // Modifie la valeur alpha de la couleur par rapport au calcule par interpolation
+    //         NouvelleCouleur.a = Alpha;
+    //         // Assigne au texte sa nouvelle couleur
+    //         AffichageNumeroVague.color = NouvelleCouleur;
+    //         // Incrémente le temps écoulé
+    //         TempsEcoule += Time.deltaTime;
+            
+    //         yield return null;
+    //     }
+    // }
+    // IEnumerator FonduTexteVagueAvant()
+    // {
+    //     // Détermine la durée du fondu
+    //     float DureeFondu = 1f;
+
+    //     float TempsEcoule = 0f;
+
+    //     while(TempsEcoule < DureeFondu) 
+    //     {
+    //         // Calcule par interpolation la valeur alpha de 1 à 0
+    //         float Alpha = Mathf.Lerp(0f, 1f, TempsEcoule / DureeFondu);
+    //         // Assigne à une NouvelleCouleur la couleur du texte
+    //         Color NouvelleCouleur = AffichageNumeroVague.color;
+    //         // Modifie la valeur alpha de la couleur par rapport au calcule par interpolation
+    //         NouvelleCouleur.a = Alpha;
+    //         // Assigne au texte sa nouvelle couleur
+    //         AffichageNumeroVague.color = NouvelleCouleur;
+    //         // Incrémente le temps écoulé
+    //         TempsEcoule += Time.deltaTime;
+            
+    //         yield return null;
+    //     }
+    // }
 }

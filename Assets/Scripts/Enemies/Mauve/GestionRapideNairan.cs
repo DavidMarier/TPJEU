@@ -31,10 +31,10 @@ public class GestionRapideNairan : MonoBehaviour
         }
     }
 
-    // Instancie les torpilles avec un délais aléatoire de 0 à 1 seconde
+    // Instancie les torpilles avec un délais aléatoire de 0 à 2 seconde
     IEnumerator Tire()
     {
-        float delaisTire = Random.Range(0, 1f);
+        float delaisTire = Random.Range(0, 2f);
         // Gère l'attaque
         yield return new WaitForSeconds(delaisTire);
         Instantiate(TorpillePrefab, PositionLancement.position, transform.rotation);

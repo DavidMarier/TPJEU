@@ -12,7 +12,9 @@ public class GestionJoueur : MonoBehaviour
     public float VitesseDeplacement;
 
     // Points de vie du joueur
-    public static int PointDeVie = 4;
+    public float PointDeVie = 4;
+    // Points de vie maximum du joueur
+    public float PointDeVieMaximum = 4;
 
     // Détermine si le joueur peut activer le bouclier
     public static bool PeutActiverBouclier = true;
@@ -53,10 +55,18 @@ public class GestionJoueur : MonoBehaviour
     // Son du joueur quand il se prend des dégats
     public AudioClip SonTouche;
 
+    // La barre de vie du joueur
+    public BarreDeVie BarreVieJoueur;
+
+    void Awake()
+    {
+        BarreVieJoueur = GetComponentInChildren<BarreDeVie>();
+    }
+
     void Start()
     {
         PeutActiverBouclier = true;
-        PointDeVie = 4;
+        BarreVieJoueur.AjusterBarreVie(PointDeVie, PointDeVieMaximum);
     }
 
     // Update is called once per frame
@@ -122,6 +132,7 @@ public class GestionJoueur : MonoBehaviour
         if(InfoCollision.gameObject && PointDeVie > 0)
         {
             PointDeVie--;
+            BarreVieJoueur.AjusterBarreVie(PointDeVie, PointDeVieMaximum);
             GetComponent<AudioSource>().PlayOneShot(SonTouche);
         }
 
